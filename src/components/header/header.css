@@ -26,6 +26,12 @@
     display: flex;
     align-items: center;
     gap : 10px;
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+.headerListItem:hover {
+    opacity: 1;
 }
 
 .active {

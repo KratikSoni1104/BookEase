@@ -65,6 +65,7 @@ const Login = () => {
         <div className="lContainer">
           <input
             type="text"
+            required
             placeholder="username"
             id="username"
             onChange={handleChange}
@@ -72,6 +73,7 @@ const Login = () => {
           />
           {name==="register" && <input
             type="email"
+            required
             placeholder="Email"
             id="email"
             onChange={e => setEmail(e.target.value)}
@@ -80,6 +82,7 @@ const Login = () => {
           <input
             type="password"
             placeholder="password"
+            required
             id="password"
             onChange={handleChange}
             className="lInput"
