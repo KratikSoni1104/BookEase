@@ -59,37 +59,40 @@ const Login = () => {
 
 
   return (
-    <div className="login">
-      <div className="lContainer">
-        <input
-          type="text"
-          placeholder="username"
-          id="username"
-          onChange={handleChange}
-          className="lInput"
-        />
-        {name==="register" && <input
-          type="email"
-          placeholder="Email"
-          id="email"
-          onChange={e => setEmail(e.target.value)}
-          className="lInput"
-        />}
-        <input
-          type="password"
-          placeholder="password"
-          id="password"
-          onChange={handleChange}
-          className="lInput"
-        />
-        {name==="login" && <button disabled={loading} onClick={handleClick} className="lButton">
-          Login
-        </button>}
-        {name === "register" &&
-        <button disabled={loading} onClick={handleRegister} className="lButton">
-          Register
-        </button>}
-        {error && <span>{error.message}</span>}
+    <div className="loginWrap">
+      <img className="loginImg" src="images/pexels-andrea-piacquadio-3769138.jpg" alt="" />
+      <div className="login">
+        <div className="lContainer">
+          <input
+            type="text"
+            placeholder="username"
+            id="username"
+            onChange={handleChange}
+            className="lInput"
+          />
+          {name==="register" && <input
+            type="email"
+            placeholder="Email"
+            id="email"
+            onChange={e => setEmail(e.target.value)}
+            className="lInput"
+          />}
+          <input
+            type="password"
+            placeholder="password"
+            id="password"
+            onChange={handleChange}
+            className="lInput"
+          />
+          {name==="login" && <button disabled={loading} onClick={handleClick} className="lButton">
+            Login
+          </button>}
+          {name === "register" &&
+          <button disabled={loading} onClick={handleRegister} className="lButton">
+            Register
+          </button>}
+          {error && <span>{error.message}</span>}
+        </div>
       </div>
     </div>
   );

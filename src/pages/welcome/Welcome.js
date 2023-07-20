@@ -16,10 +16,10 @@ function WelcomePage() {
 
   return (
     <WelcomePageContainer>
-        <Wimg src="images/pexels-pixabay-62623.jpg" alt=""></Wimg>
+        <Wimg src="images/pexels-vincent-rivaud-2147486.jpg" alt=""></Wimg>
         <Wrap>
             <WelcomeText>
-                <Wp1>Welcome to BookEase</Wp1>
+                <Wp1><em>Welcome to BookEase</em></Wp1>
                 <Wp2>Unlock the World of Adventure and Comfort</Wp2>
             </WelcomeText>
             <Buttons>
@@ -53,6 +53,15 @@ const Wimg = styled.img`
 
 const WelcomeText = styled.div`
   /* Add any styles for the WelcomeText here */
+  
+  
+  h1 {
+    color: #00B3FF;
+    margin-left: 40px;
+  }
+  p {
+    color: rgba(0, 0, 0, 0.70);
+  }
 `;
 
 const Buttons = styled.div`
@@ -72,13 +81,19 @@ const Login = styled.button`
     margin-right: 20px;
     width:150px;
     height: 40px;
+    opacity: 0.6;
+
+    &:hover{
+      opacity: 1;
+      transform: scale(1.05);
+    }
 `;
 
 const Register = styled.button`
   /* Add any styles for the WelcomeText here */
-  width:150px;
+    width:150px;
     height: 40px;
-  border: none;
+    border: none;
     padding: 10px 20px;
     background-color: #0071c2;
     color: white;
@@ -86,6 +101,12 @@ const Register = styled.button`
     cursor: pointer;
     border-radius: 15px;
     margin-left: 20px;
+    opacity: 0.6;
+
+    &:hover{
+      opacity: 1;
+      transform: scale(1.05);
+    }
 `;
 
 const Wrap = styled.div`
