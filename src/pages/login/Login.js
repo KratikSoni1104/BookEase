@@ -29,13 +29,13 @@ const Login = () => {
 
   const handleClick = async (e) => {
     e.preventDefault();
-    dispatch({ type: "LOGIN_START" });
+    dispatch({ type: "REGISTER_START" });
     try {
       const res = await axios.post(`${BackEnd_Url}/api/auth/login`, credentials);
-      dispatch({ type: "LOGIN_SUCCESS", payload: res.data });
+      dispatch({ type: "REGISTER_SUCCESS", payload: res.data });
       navigate("/home")
     } catch (err) {
-      dispatch({ type: "LOGIN_FAILURE", payload: err.response.data });
+      dispatch({ type: "REGISTER_FAILURE", payload: err.response.data });
     }
   };
 
