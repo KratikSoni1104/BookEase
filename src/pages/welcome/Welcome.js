@@ -1,10 +1,18 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
 import styled from "styled-components";
+import { AuthContext } from '../../context/AuthContext';
 
 function WelcomePage() {
 
   const navigate = useNavigate();
+  const {dispatch , error} = useContext(AuthContext);
+
+  const handleClick = (e) => {
+    console.log("hello");
+    dispatch({type : "CLEAR_ERROR"})
+    navigate("/login" , {state : {name : "register"}})
+  }
 
   return (
     <WelcomePageContainer>
@@ -18,7 +26,7 @@ function WelcomePage() {
                 <Login onClick={() => navigate("/login" , {state : {name : "login"}})}>
                     Login
                 </Login>
-                <Register onClick={() => navigate("/login" , {state : {name : "register"}})}>
+                <Register onClick={handleClick}>
                     Register
                 </Register>
             </Buttons>
