@@ -67,6 +67,13 @@ const WelcomeText = styled.div`
 const Buttons = styled.div`
   /* Add any styles for the WelcomeText here */
   margin: 20px;
+
+  @media (max-width : 480px) {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+  }
 `;
 
 const Login = styled.button`
@@ -87,6 +94,17 @@ const Login = styled.button`
       opacity: 1;
       transform: scale(1.05);
     }
+
+    @media (max-width : 480px) {
+    margin-bottom: 20px;
+    margin-left: 20px;
+    height: 30px;
+    width: 100px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+  }
 `;
 
 const Register = styled.button`
@@ -107,6 +125,15 @@ const Register = styled.button`
       opacity: 1;
       transform: scale(1.05);
     }
+
+    @media (max-width : 480px) {
+    height: 30px;
+    width: 100px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+  }
 `;
 
 const Wrap = styled.div`
@@ -116,17 +143,31 @@ const Wrap = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
+    @media (max-width : 480px) {
+      gap: 1px;
+  }
+    
 `
 
 const Wp1 = styled.h1`
   font-size: 36px;
   color: #333;
   margin-bottom: 20px;
+
+  @media (max-width : 480px) {
+    font-size: 20px;
+  }
 `
 
 const Wp2 = styled.p`
-font-size: 24px;
+  font-size: 24px;
   font-style: italic;
   color: #666;
-  margin-bottom: 40px;
+  margin-bottom: 40px; 
+
+  @media (max-width : 480px) { 
+    font-size: 15px;
+    text-wrap: wrap;
+  }
 `
