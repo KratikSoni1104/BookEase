@@ -68,7 +68,7 @@ const Buttons = styled.div`
   /* Add any styles for the WelcomeText here */
   margin: 20px;
 
-  @media (max-width : 480px) {
+  @media (max-width : 576px) {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -95,7 +95,7 @@ const Login = styled.button`
       transform: scale(1.05);
     }
 
-    @media (max-width : 480px) {
+    @media (max-width : 576px) {
     margin-bottom: 20px;
     margin-left: 20px;
     height: 30px;
@@ -126,7 +126,7 @@ const Register = styled.button`
       transform: scale(1.05);
     }
 
-    @media (max-width : 480px) {
+    @media (max-width : 576px) {
     height: 30px;
     width: 100px;
     border-radius: 5px;
@@ -144,7 +144,7 @@ const Wrap = styled.div`
     justify-content: center;
     align-items: center;
 
-    @media (max-width : 480px) {
+    @media (max-width : 576px) {
       gap: 1px;
   }
     
@@ -155,7 +155,7 @@ const Wp1 = styled.h1`
   color: #333;
   margin-bottom: 20px;
 
-  @media (max-width : 480px) {
+  @media (max-width : 576px) {
     font-size: 20px;
   }
 `
@@ -166,7 +166,7 @@ const Wp2 = styled.p`
   color: #666;
   margin-bottom: 40px; 
 
-  @media (max-width : 480px) { 
+  @media (max-width : 576px) { 
     font-size: 15px;
     text-wrap: wrap;
   }

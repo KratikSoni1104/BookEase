@@ -18,7 +18,7 @@
 .logo {
     font-weight: 500;
 
-    @media (max-width:480px) {
+    @media (max-width:576px) {
         margin-left: 10px;
     }
    
@@ -37,7 +37,7 @@
     visibility: hidden;
     margin-right: 15px;
 
-    @media (max-width:480px) {
+    @media (max-width:576px) {
         visibility: visible;
     }
 
