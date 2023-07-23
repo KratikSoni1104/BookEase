@@ -137,17 +137,46 @@
 
 @media (max-width:576px) {
     .headerDesc {
-        font-size: 15px;
-        margin-left: 5px;
+        
+        font-size: 10px;
+        margin: 0 10px;
+        padding-top: 15px;
     }
 
     .headerTitle {
         font-size: 20px;
-        margin-left: 5px;
+        margin: 0 10px;
     }
 
     .headerList {
         display: none;
+    }
+
+    .headerSearchText {
+        visibility: hidden;
+    }
+
+    .headerSearch{
+        width: 90%;
+        height: 20px;
+        margin-left: 15px;
+        padding: 10px;
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .dest{
+        flex:2;
+    }
+    .dated{
+        flex: 1;
+    }
+    .person{
+        flex: 1;
+    }
+
+    .headerBtn{
+        padding: 5px;
     }
 }
 

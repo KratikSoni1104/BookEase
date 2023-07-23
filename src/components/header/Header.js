@@ -82,12 +82,12 @@ function Header(props) {
                 {!user && <button className='headerBtn'>Sign in / Register</button>}
 
                 <div className='headerSearch'>
-                    <div className='headerSearchItem'>
+                    <div className='headerSearchItem dest'>
                         <FontAwesomeIcon icon={faBed} className='headerIcon'/>
                         <input type="text" className='headerSearchInput' placeholder='where are you going?' onChange={e => setDestination(e.target.value)}></input>
                     </div>
-                    <div className='headerSearchItem'>
-                        <FontAwesomeIcon icon={faCalendarDay} className='headerIcon'/>
+                    <div className='headerSearchItem dated'>
+                        <FontAwesomeIcon onClick={() => setOpenDate(!openDate)} icon={faCalendarDay} className='headerIcon'/>
                         <span onClick={() => setOpenDate(!openDate)} className='headerSearchText'>{`${format(date[0].startDate , "MM/dd/yyyy")} to ${format(date[0].endDate , "MM/dd/yyyy")}`}</span>
                         {openDate && <DateRange className='date'
                             editableDateInputs={true}
@@ -97,8 +97,8 @@ function Header(props) {
                             minDate={new Date()}
                         />}
                     </div>
-                    <div className='headerSearchItem'>
-                        <FontAwesomeIcon icon={faPerson} className='headerIcon'/>
+                    <div className='headerSearchItem person'>
+                        <FontAwesomeIcon onClick={() => setOpenOptions(!openOptions)} icon={faPerson} className='headerIcon'/>
                         <span onClick={() => setOpenOptions(!openOptions)} className='headerSearchText'>{options.adult} Adult . {options.children} Children . {options.room} Room</span>
                         {openOptions && <div className='options'>
                             <div className='optionItems'>
