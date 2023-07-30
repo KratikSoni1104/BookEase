@@ -12,6 +12,11 @@
     object-fit :cover;
     width: 100%;
     cursor: pointer;
+    height: 100%;
+}
+
+.jaipur {
+    width: 35%;
 }
 
 .featuredItem {
@@ -25,4 +30,20 @@
     position: absolute;
     bottom: 20px;
     left: 20px;
+}
+
+@media (max-width:576px){
+    .featured {
+        flex-wrap: wrap;    
+    }
+
+    .featuredImg {
+        width: 350px;
+        margin: 0 10px;
+        border-radius: 10px;
+    }
+
+    .jaipur {
+        width: 360px;
+    }
 }
